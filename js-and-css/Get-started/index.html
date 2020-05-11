@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spin Fan</title>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <style>
+    a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        text-decoration: none;
+        transform: translate(-50%,-50%);
+        padding: 85px 40px;
+        background-color: #2196F3;
+        border-radius: 50%;
+        font-size: 19px;
+        text-transform: uppercase;
+        animation: animate 2s linear infinite;
+    }
+    @keyframes animate {
+        0%{ box-shadow: 0 0 0 0 rgba(33, 150, 243, 0),}
+        30%{ box-shadow: 0 0 0 50px rgba(33, 150, 243, 0.5)}
+        70%{ box-shadow: 0 0 30px 30px rgba(33, 150, 243, 0.4),0 0 15px 15px rgba(33, 150, 243, 0)}
+        100%{ box-shadow: 0 0 30px 0 rgba(33, 150, 243, 0)}
+        
+    }
+    .loader_container {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        animation: container 1s linear infinite;
+    }
+    @keyframes container {
+        0%{ filter: hue-rotate(0deg);}
+        20%{ filter: hue-rotate(80deg);}
+        40%{ filter: hue-rotate(140deg);}
+        60%{ filter: hue-rotate(220deg);}
+        80%{ filter: hue-rotate(270deg);}
+        100%{ filter: hue-rotate(360deg);}
+        
+    }
+    .loader-1 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 5px solid transparent;
+        border-top:5px solid #2196f3; 
+        border-radius:50%;
+        animation: ro 2s linear infinite; 
+        transform: translate(50%,50%)
+    }
+    @keyframes ro {
+        0%{ transform: rotate(0deg);}
+        25%{ transform: rotate(80deg);}
+        50%{ transform: rotate(160deg);}
+        75%{ transform: rotate(260deg);}
+        100%{ transform: rotate(360deg);}
+        
+    }
+    </style>
+</head>
+<body style="background-color: black;">
+    <a href="#"> Get Started</a>
+    <div class="loader_container">
+        <div class="loader-1"></div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        var get_started = $("a");
+        var loader = $(".loader_container");
+     get_started.hide();
+     setTimeout(function(){
+         loader.fadeOut();
+         get_started.fadeIn();
+     },3000);
+    })
+    </script>
+</body>
+</html>

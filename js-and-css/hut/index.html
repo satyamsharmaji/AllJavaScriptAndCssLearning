@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hut</title>
+    <style>
+    body {
+        background: linear-gradient(90deg,orange,white);
+    }
+    .hut {
+        perspective-origin: right;
+        perspective: 1000px;
+    }
+    .hut_roof1 {
+        width: 450px;
+        height: 130px;
+        border: 1px solid #000;
+        transform: skewX(219deg) translateZ(50px);
+        background-color: brown;
+    }
+        
+    .hut_roof2 {
+        width: 487px;
+        height: 130px;
+        border: 1px solid #000;
+        transform: skewX(-219deg) translateZ(-38px);
+        left: 193px;
+        background-color: brown;
+    }
+    .hut_all_faces {
+        margin: 12% 30%;
+    }
+    .hut_all_faces div {
+        position: absolute;
+        opacity: 0.5;
+    }
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="hut">
+        <div class="hut_all_faces">
+            <div class="hut_roof1"></div>
+            <div class="hut_roof2"></div>
+            <div class="front_wall"></div>
+        </div>
+    </div>
+</body>
+</html>

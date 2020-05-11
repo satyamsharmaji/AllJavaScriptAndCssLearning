@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.navbar.s_navbar {
+    background: #2b377b;
+    margin-bottom: 0;
+}
+.logo {
+    width: 53px;
+    padding: 9px 0;
+}
+.info_area {
+    width: 250px;
+    display: inline-block;
+    margin-top: 21px;
+}
+.info_area .icon_are {
+    float: left;
+    width: 33px;
+    height: 38px;
+    font-size: 27px;
+    color: #2c387a;
+}
+.text_area {
+    font-size: 14px;
+    margin-left: 43px;
+}
+.cstm_menu a {
+    color: #fff;
+    text-transform: uppercase;
+    position: relative !important;
+    z-index: 1;
+    
+}
+.social_icon a {
+    font-size: 22px;
+    color: #fff;
+}
+.cstm_menu a:hover {
+    background: transparent !important;
+    color: #f94340
+}
+.social_icon a:hover {
+    background: transparent !important;
+    color: #f94340;
+}
+.banner_image {
+    background: url(../images/banner_image.jpeg);
+    background-size: 100% 100%;
+    padding: 143px 9px;
+    height: 537px;
+    position: relative;
+    z-index: 1;
+}
+.banner_image:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000091;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.banner_title h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #000;
+}
+.banner_subtitle h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #000;
+}
+.banner_title {
+    margin-top: 62px;
+}

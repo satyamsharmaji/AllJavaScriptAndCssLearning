@@ -1,0 +1,13 @@
+
+
+.circles {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    position: absolute;
+}
+img{
+   width: 100%;
+    filter:blur(15px); 
+}

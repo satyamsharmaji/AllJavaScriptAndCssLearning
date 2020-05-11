@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FLip Image Plugin</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="flip_it.js"></script>
+    <style>
+        .front{
+            background-color: purple;
+        }
+        .back{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="image_container">
+        
+        <div class="image-box">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="image-box">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="image-box">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="image-box">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="image-box">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+
+        <div class="image-box">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <script>
+    $(".image_container").flip_it({
+        width : 300,
+        height : 300,
+        time : 500,
+    });
+    </script>
+</body>
+</html>

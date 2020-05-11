@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Button Hover</title>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<style>
+body {
+    background: #231e1b;
+    margin: 0;
+    padding: 0;
+}
+.btn_box {
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.box {
+    display: inline-block;
+    width: 206px;
+    height: 69px;
+    margin: 0 10px;
+}
+.icon i {
+    line-height: 69px;
+}
+.icon {
+    height: 69px;
+    display: block;
+    line-height: 69px;
+    text-align: center;
+    font-size: 40px;
+	background-color: #b7b7b7;
+    transform: translateY(0px) rotateX(0deg);
+	transition: 0.5s;
+}
+.box:hover .icon{
+    transform: translateY(69px) rotateX(90deg);
+    transform-origin: top;
+}
+.box:hover .detail{
+    transform: translateY(-69px) rotateX(0deg);
+    transform-origin: top;
+}
+.detail {
+    line-height: 69px;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    transform: translateY(-100px) rotateX(-90deg);
+    margin-top: -18px;
+	transition: 0.5s;
+}
+.box:nth-child(1)  .detail{
+	background-color:  green;
+}
+.box:nth-child(2)  .detail {
+	background-color:  red;
+}
+.box:nth-child(3)  .detail{
+	background-color:  blue;
+}
+</style>
+</head>
+<body>
+<div class="btn_box">
+	<div class="box">
+		<div class="icon"> <i class="fa fa-map-marker" aria-hidden="true"></i> </div>
+		<div class="detail"><h3>Gurgaon</h3></div>
+	</div>
+	
+	<div class="box">
+		<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+		<div class="detail"><h3>+91 7053 26 8180</h3></div>
+	</div>
+	
+	<div class="box">
+		<div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+		<div class="detail"><h3>info@gmail.com</h3></div>
+	</div>
+</div>
+</body>
+</html>

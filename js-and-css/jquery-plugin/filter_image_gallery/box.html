@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box</title>
+    <style>
+    .view {
+        perspective: 1000px;
+        margin-left: 25%;
+    }
+    .cube {
+        transform-style: preserve-3d;
+    }
+    
+   .face {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        opacity: 0.5;
+    }
+    .face.front {
+        background-color: red;
+        transform: translateZ(100px);
+    }
+    .face.back {
+        transform: translateZ(-100px);
+        background-color: red;
+    }
+    .face.top {
+        background-color: yellow;
+        transform: translateY(-100px) rotateX(90deg);
+    }
+    .face.bottom {
+        background-color: yellow;
+        transform: translateY(100px) rotateX(90deg);
+    }
+    .face.left {
+        background-color: blue;
+        transform: translateX(-100px) rotateY(90deg);
+    }
+    .face.right {
+        background-color: blue;
+        transform: translateX(100px) rotateY(90deg);
+    }
+    </style>
+</head>
+<body>
+   <div class="view">
+         <div class="cube">
+             <div class="face front"></div>
+             <div class="face back"></div>
+             <div class="face top"></div>
+             <div class="face bottom"></div>
+             <div class="face left"></div>
+             <div class="face right"></div>
+             
+         </div>
+   </div> 
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tru Slider</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="tru_slider.js"></script>
+    <style>
+    body{
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="tru_slider">
+        <ul>
+            <li>
+                <div class="image">
+                    <img src="slide1.jpg" alt="slide1" >
+                </div>
+            </li>
+            <li>
+                <div class="image">
+                        <img src="slide2.jpg" alt="slide1" >
+                </div>
+            </li>
+            <li>
+                <div class="image">
+                        <img src="slide3.jpg" alt="slide1" >
+                </div>
+            </li>
+            <li>
+                <div class="image">
+                        <img src="slide4.jpg" alt="slide1" >
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        $(".tru_slider").tru_slider({
+            automatic_fade : false,
+            navigation : true,
+            height : 550,
+            full_width : true,
+            show_bullet : true,
+            speed : 5000,
+        });
+    </script>
+</body>
+</html>

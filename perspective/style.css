@@ -1,0 +1,38 @@
+.image_outer {
+    width: 50%;
+    margin: 110px auto;
+    perspective: 100px;
+    
+}
+.img_inner {
+    box-shadow: 0 0 2px 2px #ccc;
+    padding: 4px;
+    transition: all 10s;
+   transform: rotateX(250deg);
+    
+}
+.img_inner img {
+    width: 100%;
+  
+}
+.car_img {
+    position: absolute;
+    z-index: 1;
+    margin-left: 22%;
+    /* top:45px; */
+}
+.car_img img {
+    width: 100%;
+}
+.car {
+    transform: scale(0,0);
+    animation: moving 5s linear;
+}
+@keyframes moving{
+    0%{
+        transform: scale(3,3);
+    }
+    100%{
+        transform: scale(0,0);
+    }
+}

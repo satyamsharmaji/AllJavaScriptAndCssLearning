@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Flip</title>
+    <style>
+    body {
+        background: linear-gradient(10deg,#ca5e12,#171616);
+    }
+    .book_section {
+        width: 282px;
+        height: 400px;
+        background: #03a9f4;
+        background-size: cover;
+        left: 45%;
+        top: 62%;
+        position: relative;
+        margin-top: 20%;
+        perspective: 1000px;
+        transform: translate(-50%,-50%);
+    }
+    .book_inner {
+        position: absolute;
+        width: 244px;
+        height: 100%;
+        background:yellow;
+        left: 38px;
+        background-size: cover;
+    }
+    .cover {
+        position: absolute;
+        width: 243px;
+        height: 100%;
+        left: 38px;
+        transform: rotateY(-15deg);
+        background: green;
+        transform-origin: left;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        background-size: cover;
+    }
+    .book_section:hover .cover{
+        transform: rotateY(-180deg);
+        /* background: #000; */
+    }
+    </style>
+</head>
+<body>
+    <div class="book_section">
+        <div class="book_inner">
+         </div>
+        <div class="cover">
+
+        </div>
+    </div>
+</body>
+</html>

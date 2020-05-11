@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Image Gallery</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <!-- <script src="flip_it.js"></script> -->
+    <style>
+        div.ima {
+            width: 259px;
+            float: left;
+            margin: 22px 25px;
+            border: 4px solid #000;
+            transition: all 1s linear;
+            position: relative;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+        }
+        .ima img {
+            width: 100%;
+        }
+        div.ima.unorderd{
+            opacity: 0;
+        }
+        div.ima.unorderd:nth-child(1) {
+            position: absolute;
+            top: 88px;
+            left: 107px;
+        }
+        div.ima.unorderd:nth-child(2) {
+            position: absolute;
+            top: 188px;
+            right: 55px;
+        }
+        div.ima.unorderd:nth-child(3) {
+            position: absolute;
+            bottom: 20px;
+            left:200px;
+        }
+        div.ima.unorderd:nth-child(4) {
+            position: absolute;
+            top: 330px;
+            right: 25px;
+        }
+        div.ima.unorderd:nth-child(5) {
+            position: absolute;
+            top: 300px;
+            right: 300px;
+        }
+        div.ima.unorderd:nth-child(6) {
+            position: absolute;
+            bottom: 45px;
+            left: 107px;
+        }
+        div.ima.unorderd:nth-child(7) {
+            position: absolute;
+            top: 88px;
+            left: 350px;
+        }
+        div.ima.unorderd:nth-child(8) {
+            position: absolute;
+            top: 88px;
+            right: 41px;
+        }  
+        div.ima.unorderd:nth-child(9) {
+            position: absolute;
+            bottom: 208px;
+            right: 107px;
+        }  
+    </style>
+</head>
+<body>
+    <!-- <div class="filter_image_gallery">
+        <ul>
+           <li>Gallery 1</li> 
+           <li>Gallery 2</li> 
+           <li>Gallery </li> 
+        </ul>
+    </div> -->
+    <div class="image_gallery">
+       <div id="img_1" class="ima unorderd">
+         <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+       </div> 
+       <div id="img_2" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+      <div id="img_3" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+      <div id="img_4" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+      <div id="img_5" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+      <div id="img_6" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+      <div id="img_7" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+      <div id="img_8" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+      <div id="img_9" class="ima unorderd">
+        <img src="http://wp3.commonsupport.com/newwp/fixnox/wp-content/uploads/2018/05/1.jpg" alt="">
+      </div> 
+    </div>
+    <script>
+        setTimeout(function(){
+            $(".ima").removeClass("unorderd");
+        },1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Universe</title>
+    <style>
+    body{
+        background: url(universe.jpg);
+        background-size: cover; 
+    }
+    .Universe_container {
+        width: 80%;
+        height: 400px;
+        margin: 12% auto;
+        perspective: 600px;
+    }
+    .cicle-1 {
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        border: 1px solid transparent;
+        box-shadow: 0 0 22px 7px #ccaa44;
+        border-radius: 50%;
+    }
+    .circle-2,.circle-3,.circle-4,.circle-5,.circle-6,.circle-7,.circle-8,.circle-9 {
+        width: 85%;
+        height: 85%;
+        border: 1px solid transparent;
+        box-shadow: 0 0 22px 7px #ccaa44;
+        border-radius: 50%;
+        margin: 3% auto;
+        animation: ro 5s linear infinite;
+    }
+    /* @keyframes ro {
+        from { transform: rotate(0deg);}
+        to { transform: rotate(360deg);}
+    } */
+    .sun {
+        width: 42%;
+        height: 93%;
+        margin: 1% auto;
+        border-radius: 50%;
+        background-color: #ff9b04;
+        box-shadow: 0 0 31px 12px #ff9b04;
+        animation: sun_rotate 4s linear infinite;
+    }
+    @keyframes sun_rotate {
+        from { transform: rotateZ(0deg)}
+        to { transform: rotateZ(360deg)}
+        
+    }
+    .planet {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ccc5c5;
+        top: 26%;
+        animation: rota 0.4s linear infinite;
+    }
+    </style>
+</head>
+<body>
+    <div class="Universe_container">
+        <div class="cicle-1"> 
+                <div class="planet"></div>
+            <div class="circle-3">
+                <div class="circle-4">
+                    <div class="circle-5">
+                        <div class="circle-6">
+                            <div class="circle-7">
+                                <div class="circle-8">
+                                    <div class="circle-9">
+                                        <div class="sun">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

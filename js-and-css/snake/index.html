@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>scrollLeft demo</title>
+  <style>
+  body {
+      background:url('forest.jpg');
+      background-size: cover; 
+  }
+  .boll-1,.boll-2,.boll-3,.boll-4,.boll-5,.boll-6 {
+      width: 35px;
+      height: 35px;
+      border-radius: 18px;
+      background:url('snak.jpg');
+      background-size: 48px;
+      position: absolute;
+      transition: all 0.2s;
+  }
+  .boll-1{
+    top : 250px;
+    left: 250px;
+    transform: translate3d(0px);
+    transition: all 0.10s;
+    border-radius: 2px;
+    z-index: 5; 
+  }
+  .boll-2 {
+    z-index: 4;
+    top: 240px;
+    left: 220px;
+    transform: translate3d(0px);
+    transition: all 0.14s;
+  }
+  .boll-3 {
+    top: 230px;
+    left: 200px;
+    transform: translate3d(0px);
+    transition: all 0.17s;
+  }
+  .boll-4 {
+    top: 220px;
+    left: 180px;
+    transform: translate3d(0px);
+    transition: all 0.20s;
+  }
+  .boll-5 {
+    top: 210px;
+    left: 160px;
+    transform: translate3d(0px);
+    transition: all 0.23s;
+  }
+  .boll-6 {
+    top: 200px;
+    left: 140px;
+    transform: translate3d(0px);
+    transition: all 0.26s;
+  }
+  
+  span.eyes:nth-child(1) {
+      width: 4px;
+      height: 4px;
+      background-color: #F44336;
+      position: absolute;
+      top: 12px;
+      z-index: 6;
+      left: 8px;
+  }
+  span.eyes:nth-child(2) {
+      width: 4px;
+      height: 4px;
+      background-color: #F44336;
+      position: absolute;
+      top: 12px;
+      z-index: 6;
+      left: 22px;
+  }
+  span.mouth {
+      width: 20px;
+      position: absolute;
+      top: 22px;
+      border-bottom: 1px solid #000;
+      left: 7px;
+  }
+  span.mouth:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 27px;
+    background-color: #F44336;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    left: 8px;
+    top: 1px;
+    animation: toung 0.5s ease-in-out forwards infinite;
+}
+span.mouth:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: #F44336;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    left: 5px;
+    top: 6px;
+    transform: skewY(146deg);
+    animation: toung 0.5s ease-in-out forwards infinite;
+    border-top-left-radius: 56px;
+}
+@keyframes toung {
+  0%{
+    -webkit-transform: rotate(10deg);
+    height: 15px;
+    }
+    50%{
+      -webkit-transform: rotate(-5deg);
+      height: 22px;
+      }
+    100%{
+      -webkit-transform: rotate(10deg);
+      height: 27px;
+      }
+}
+  </style>
+   <script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+</head>
+<body>
+ <div class="boll-1">
+   <span class="eyes"></span>
+   <span class="eyes"></span>
+   <span class="mouth"></span>
+ </div>
+ <div class="boll-2"></div>
+ <div class="boll-3"></div>
+ <div class="boll-4"></div>
+ <div class="boll-5"></div>
+ <div class="boll-6"></div>
+ 
+<script>
+  function snak_fun(){
+    var bolls = [".boll-1",".boll-2",".boll-3",".boll-4",".boll-5",".boll-6"];
+    $(window).mousemove(function(event){
+     var mouseX = event.pageX;
+     var mouseY = event.pageY;
+     var a = 5;
+     
+     
+     
+     for(i = 0; i < bolls.length; i++){
+      //  alert(bolls[i]);
+          $(bolls[i]).css({
+            left : mouseX,
+            top : mouseY,
+            transform: "translate3d("+a+"px, "+a+"px, "+a+"px)"
+        });
+        a = a+5;
+        mouseX = mouseX-10;
+        mouseY = mouseY-30;
+        
+     }
+     
+     
+   });
+  }
+  $(document).ready(function(){
+
+   snak_fun();
+  });
+</script>
+</body>
+</html>
